@@ -1,3 +1,9 @@
+// play musik setelah interaksi
+const musik = document.getElementById("musik");
+document.body.addEventListener("click", ()=>{
+musik.play().catch(()=>{});
+},{once:true});
+
 const questions = [
 "Seberapa kamu kenal aku?",
 "Seberapa aku lucu?",
@@ -54,3 +60,34 @@ document.getElementById("f_skor").value = skor;
 setTimeout(()=>form.submit(),1500);
 }
 }
+// background hearts
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+
+let hearts=[];
+for(let i=0;i<40;i++){
+hearts.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*6+2,
+speed:Math.random()*1+0.5
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="#ff7aa2";
+
+hearts.forEach(h=>{
+ctx.beginPath();
+ctx.arc(h.x,h.y,h.size,0,Math.PI*2);
+ctx.fill();
+h.y-=h.speed;
+if(h.y<0)h.y=canvas.height;
+});
+
+requestAnimationFrame(draw);
+}
+draw();
