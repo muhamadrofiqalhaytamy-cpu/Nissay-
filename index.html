@@ -3,13 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Hai Nissay 🙈</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<audio id="musik" autoplay loop>
+<canvas id="bg"></canvas>
+
+<!-- panda -->
+<img id="panda" src="https://media.tenor.com/4c4JH7H8T9sAAAAi/panda-love.gif">
+
+<!-- musik mp3 -->
+<audio id="musik" loop>
 <source src="https://files.catbox.moe/8h2v7i.mp3" type="audio/mp3">
 </audio>
+
+<!-- youtube music (optional) -->
+<iframe id="ytmusic"
+src="https://www.youtube.com/embed/jfKfPfyJRdk?enablejsapi=1&autoplay=1"
+allow="autoplay"
+style="display:none"></iframe>
 
 <div class="card">
 
@@ -35,6 +47,6 @@
 
 </div>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
