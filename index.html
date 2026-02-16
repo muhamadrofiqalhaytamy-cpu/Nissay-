@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Hai Nissay 🙈</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="musik" autoplay loop>
+<source src="https://files.catbox.moe/8h2v7i.mp3" type="audio/mp3">
+</audio>
+
+<div class="card">
+
+<h2 id="title">Hai Nissay 🙈</h2>
+<p id="question">Sebelum mulai, namamu siapa?</p>
+
+<input type="text" id="nama" placeholder="Tulis namamu...">
+<br><br>
+<button onclick="mulai()">Mulai</button>
+
+<div id="quiz" style="display:none;">
+<p id="qtext"></p>
+<input type="range" id="slider" min="0" max="100" value="50">
+<p id="percent">50%</p>
+<button onclick="nextQuestion()">Lanjut</button>
+</div>
+
+<form id="form" action="ISI_LINK_FORMSPREE_KAMU" method="POST">
+<input type="hidden" name="nama" id="f_nama">
+<input type="hidden" name="jawaban" id="f_jawaban">
+<input type="hidden" name="skor" id="f_skor">
+</form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
